@@ -9,7 +9,7 @@ const io = new Server(server);
 const PORT = process.env.PORT || 3000;
 const rooms = new Map();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 app.get('/health', (_, res) => res.json({ ok: true }));
 
 const scenarios = [
